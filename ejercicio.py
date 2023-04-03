@@ -13,11 +13,12 @@ class Productor(threading.Thread):
 
     def run(self):
         for i in range(10):
-            numero = random.randint(1, 10)
+            numero =(random.randint(1, 10)) #este es L[0]
+
             self.cola.put(numero)
-            print ("Productor: {} ha producido el numero {}" .format(self.getName(), numero))
+            print ("Productor: ha producido el numero {}" .format(numero))
             time.sleep(1)
-        print ("Productor: {} termina"  .format(self.getName()))
+        print ("Productor ha terminado de producir")
 
 #definimos la clase consumidor
 class Consumidor(threading.Thread):
@@ -28,9 +29,9 @@ class Consumidor(threading.Thread):
     def run(self):
         for i in range(10):
             numero = self.cola.get()
-            print ("Consumidor: {} ha consumido el numero {}" .format(self.getName(), numero))
+            print ("Consumidor: ha consumido el numero {}" .format(numero))
             time.sleep(1)
-        print ("Consumidor: {} termina" .format(self.getName()))
+        print ("Consumidor ha terminado de consumir")
 
 #definimos la clase main
 def main():

@@ -3,9 +3,7 @@ import threading
 import time
 import random
 from queue import Queue
-import sys
-import os
-import signal
+
 
 #definimos la clase productor
 class Productor(threading.Thread):
@@ -17,9 +15,9 @@ class Productor(threading.Thread):
         for i in range(10):
             numero = random.randint(1, 10)
             self.cola.put(numero)
-            print ("Productor: %s ha producido el numero %s" % (self.getName(), numero))
+            print ("Productor: {} ha producido el numero {}" .format(self.getName(), numero))
             time.sleep(1)
-        print ("Productor: %s termina" % self.getName())
+        print ("Productor: {} termina"  .format(self.getName()))
 
 #definimos la clase consumidor
 class Consumidor(threading.Thread):
@@ -30,9 +28,9 @@ class Consumidor(threading.Thread):
     def run(self):
         for i in range(10):
             numero = self.cola.get()
-            print ("Consumidor: %s ha consumido el numero %s" % (self.getName(), numero))
+            print ("Consumidor: {} ha consumido el numero {}" .format(self.getName(), numero))
             time.sleep(1)
-        print ("Consumidor: %s termina" % self.getName())
+        print ("Consumidor: {} termina" .format(self.getName()))
 
 #definimos la clase main
 def main():

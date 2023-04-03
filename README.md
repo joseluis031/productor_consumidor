@@ -1,5 +1,5 @@
 # productor_consumidor
-
+El link de este repositorio es el siguiente: [GitHub](https://github.com/joseluis031/productor_consumidor.git)
 ```
 Productor: ha producido el numero 3
 Consumidor: ha consumido el numero 3

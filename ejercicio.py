@@ -44,6 +44,3 @@ def main():
     consumidor.join()
     
     print ("Programa terminado")
-
-if __name__ == "__main__":
-    main()

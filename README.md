@@ -55,6 +55,20 @@ def main():
     
     print ("Programa terminado")
 ```
+### Explicacion del codigo
+He utilizado las librerias threading, time, random, y queue
+
+Primero he creado la clase Productor, utilizando un bucle mediante el cual el productor ira creando productos; y he añadido los elementos a una cola a la que accedera la siguiente clase creada a traves del metodo .get()
+
+Despues he creado la clase Consumidor, utilizando un bucle mediante el cual el consumidor ira consumiento productos, los cuales obtiene de la cola ya generada anteriormente 
+--utilizo time.sleep para que el programa se pause un segundo cada vez que se genera o se consume un producto.
+
+Por ultimo ejecutamos en paralelo las clases con el metodo .start y .join
+
+
+
+
+
 
 ### Ejecucion del codigo
 ```

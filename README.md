@@ -1,5 +1,12 @@
 # productor_consumidor
 El link de este repositorio es el siguiente: [GitHub](https://github.com/joseluis031/productor_consumidor.git)
+## Explicacion del ejercicio
+
+Este ejercicio consiste en la creacion de dos hilos, y que mientras uno de ellos
+ejecute una accion, el otro va a estar ejecutando otra accion, la cual
+depende del hilo anterior y la realizara de manera concurrente
+
+### Ejecucion del codigo
 ```
 Productor: ha producido el numero 3
 Consumidor: ha consumido el numero 3
